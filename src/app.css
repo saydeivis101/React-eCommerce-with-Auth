@@ -28,3 +28,33 @@ header.hero{
     border: 1px solid red;
 }
 
+.cartIcon{
+    font-size: 1rem;
+    color: red;
+    background-color: dodgerblue;
+    border-radius: 100%;
+    padding: 0.13rem 0.2rem;
+    position: fixed;
+    right: 1.5vh;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.hidden{
+    display:none;
+}
+
+.cartCheckbox{
+    display:none;
+}
+
+.cartIcon ~ .cartCheckbox:checked  ~.cart-display-items{
+    display:block;
+    position: absolute;
+    z-index: 10;
+    right: 1.5vh;
+    width: 40vw;
+    background-color: rgba(0, 0, 0, 0.601);
+    padding: 1.5rem 1rem;
+}
+
