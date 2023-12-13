@@ -10,10 +10,11 @@ export const useCartStore = create((set) => ({
   cart: JSON.parse(localStorage.getItem('cart')) || [],
 
   addToCart: (product, quantity = 1) => set((state) => {
-    const productInCart = state.cart.findIndex((p) => p.id === product.id);
+    const productInCart = state.cart.findIndex((item) => item.id === product.id);
 
     if (productInCart >= 0) {
       const cloneState = structuredClone(state.cart);
+      console.log(cloneState);
       cloneState[productInCart].quantity += quantity;
 
       if (cloneState[productInCart].quantity < 0) {
@@ -39,8 +40,8 @@ export const useCartStore = create((set) => ({
   }),
 
   removeFromCart: (productId, quantity=1) => set((state) => {
-
-    const productInCart = state.cart.findIndex((p) => p.id === productId);
+    console.log(productId)
+    const productInCart = state.cart.findIndex((item) => item.id === productId);
 
     if (productInCart >= 0) {
       const cloneState = structuredClone(state.cart);

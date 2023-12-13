@@ -1,5 +1,5 @@
-html{
-    background-color: rgba(0, 0, 0, 0.827);
+html, body{
+    background-color: rgb(0, 0, 0);
 }
 
 body{
@@ -10,7 +10,7 @@ body{
 
 .main-container{
     padding: 0 5rem;
-    margin: 0 17vw;
+    margin: 0 auto;
     margin-top: 0;
     width: 100%;
     background-color: rgba(0,0,0,1);
@@ -34,7 +34,7 @@ header.hero{
 
 .products-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 1rem;
 }
 
@@ -90,13 +90,29 @@ header.hero{
     object-fit: cover;
     align-items: center;
     text-align: center;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    width: 11.6rem;
+}
+
+.active{
+    background: #52c234;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061700, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061700, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .grid-product-item img{
-    width: 10rem;
+    width: 9rem;
     height: 7rem;
     object-fit: cover;
-    margin: 0 auto;
+    margin: 0.5rem auto;
+    border-radius: 20%;
 }
 
 .grid-product-item p{
@@ -108,4 +124,23 @@ header.hero{
     height: 2rem;
     text-align: center;
     padding: 0 0.8rem;
+}
+
+.grid-product-item .buttons{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+}
+
+.grid-product-item .buttons .btn{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 23%;
+}
+
+.nav-main{
+    background-color: rgba(31, 24, 24, 0.252);
 }
