@@ -10,8 +10,6 @@ export const CartDisplay = () => {
 
     const hasItemsInCart = cart.length>0;
 
-    console.log(cart);
-
   return (
     <div className="cart-display">
         <label className="cartIcon" htmlFor={inputCheckbox}>

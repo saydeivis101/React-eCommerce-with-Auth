@@ -1,7 +1,14 @@
 import React from 'react'
+import { Routes } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { LoginPage } from '../pages/LoginPage'
+import { RegisterPage } from '../pages/RegisterPage'
 
 export const AuthRouter = () => {
   return (
-    <div>AuthRouter</div>
+    <Routes>
+        <Route path='auth/login' element={<LoginPage/>} />
+        <Route path='auth/register' element={<RegisterPage/>} />
+    </Routes>
   )
 }

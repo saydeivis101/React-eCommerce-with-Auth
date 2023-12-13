@@ -23,11 +23,11 @@ export const ProductItem = ({ product }) => {
       }
     
       return (
-        <li key={product.id}>
+        <li className="grid-product-item" key={product.id}>
           <picture>
             <img src={product.image} alt={product.title} />
           </picture>
-          <p>{product.title}</p>
+          <strong><p>{product.title}</p></strong>
           <p>{product.price}$</p>
     
           <div className="buttons">

@@ -5,7 +5,7 @@ export const SearchContext = createContext()
 
 export const SearchProvider = ({children}) => {
 
-    const formatedProducts = products.map((product)=>(
+    const formatedProducts = products.slice(0,10).map((product)=>(
       {
         id: product.id,
         image: product.thumbnail,
