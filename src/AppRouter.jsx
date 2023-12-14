@@ -3,16 +3,23 @@ import { Route } from "react-router-dom";
 import { AuthRouter } from "./auth/routes/AuthRouter";
 import { Routes } from "react-router-dom";
 import { EcommerceRouter } from "./ecommerce/routes/EcommerceRouter";
-import { SearchProvider } from "./ecommerce/context/SearchProvider";
 import { CartProvider } from "./ecommerce/context/CartProvider";
+import { AppTheme } from "./theme/AppTheme";
+import { SearchProvider } from "./ecommerce/context/SearchProvider";
+import { NavbarComponent } from "./ui/Navbar";
 
 export const AppRouter = () => {
   return (
-    <CartProvider>
-      <Routes>
-        <Route path="/*" element={<EcommerceRouter />} />
-        <Route path="auth/*" element={<AuthRouter />} />
-      </Routes>
-    </CartProvider>
+    <AppTheme>
+      <SearchProvider>
+        <NavbarComponent />
+        <CartProvider>
+          <Routes>
+            <Route path="/*" element={<EcommerceRouter />} />
+            <Route path="auth/*" element={<AuthRouter />} />
+          </Routes>
+        </CartProvider>
+      </SearchProvider>
+    </AppTheme>
   );
 };

@@ -1,0 +1,7 @@
+.user-auth{
+    display:flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.6rem;
+}

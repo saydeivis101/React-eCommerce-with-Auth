@@ -7,11 +7,8 @@ import { NavbarComponent } from "../../ui/Navbar";
 
 export const EcommerceRouter = () => {
   return (
-    <SearchProvider>
-      <NavbarComponent/>
       <Routes>
         <Route path="/*" element={<MainPage />} />
       </Routes>
-    </SearchProvider>
   );
 };

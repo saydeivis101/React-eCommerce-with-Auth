@@ -1,14 +1,14 @@
-import React from "react";
-import { AuthLayout } from "../components/layouts/authlayout/AuthLayout";
+import { AuthLayout } from "../layouts/authlayout/AuthLayout";
 import { Link as RouterLink } from "react-router-dom";
-import { Grid, Link, TextField, Typography } from "@mui/material";
-import { Button } from "react-bootstrap";
+
+import { Button, Grid, Link, TextField, Typography } from "@mui/material";
+
 import { Google } from "@mui/icons-material";
 import { Navigate } from "react-router-dom";
 
-export const RegisterPage = () => {
+export const LoginComponent = () => {
   return (
-    <AuthLayout title={"Sign In"}>
+    <AuthLayout title={"Login"}>
       <form action="">
         <Grid container direction="column">
           <Grid item xs={12} md={6} sx={{ mt: 2 }}>
@@ -30,13 +30,13 @@ export const RegisterPage = () => {
 
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
             <Grid item xs={12}>
-              <Button sx={{ mt: 2 }} variant="container" fullWidth>
+              <Button sx={{ mt: 2 }} variant='contained' fullWidth>
                 Login
               </Button>
             </Grid>
 
             <Grid item xs={12}>
-              <Button sx={{ mt: 2 }} variant="contained" fullWidth>
+              <Button sx={{ mt: 2 }} variant='contained' fullWidth>
                 <Google />
                 <Typography variant="p" sx={{ ml: 0.3 }}>
                   Google
